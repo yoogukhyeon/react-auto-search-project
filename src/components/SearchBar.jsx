@@ -22,6 +22,22 @@ export const SearchBar = ({ setResults }) => {
     fetchData(value);
   };
 
+  const goToSearchPage = () => {
+    alert(input);
+    setInput("");
+  };
+
+  //key event
+  const KeyEvent = {
+    Enter: () => {
+      goToSearchPage();
+    },
+  };
+
+  const handleKeyUp = (e) => {
+    if (KeyEvent[e.key]) KeyEvent[e.key]();
+  };
+
   return (
     <div className="input-wrapper">
       <FaSearch id="search-icon" />
@@ -29,6 +45,7 @@ export const SearchBar = ({ setResults }) => {
         placeholder="Type to search..."
         value={input}
         onChange={(e) => handleChange(e.target.value)}
+        onKeyUp={handleKeyUp}
       />
     </div>
   );
