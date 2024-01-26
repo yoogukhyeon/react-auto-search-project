@@ -1,6 +1,6 @@
 # react & vite 검색 자동 완성 기능
 
-### 프로젝트 실행 방법
+### REACT 프로젝트 실행 방법
 
 1. npm i
 2. npm run dev
